@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="977.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <tabs>
+    <Tab text="Pokemon">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="690.0" prefWidth="955.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="877.0">
+                     <children>
+                        <Label layoutX="346.0" layoutY="30.0" text="Pokemon">
+                           <font>
+                              <Font size="47.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomeField" layoutX="215.0" layoutY="146.0" promptText="nome" />
+                        <Button layoutX="274.0" layoutY="483.0" mnemonicParsing="false" onAction="#handlePokemon" text="Enviar" />
+                        <Label layoutX="118.0" layoutY="152.0" text="Nome" />
+                        <Label layoutX="125.0" layoutY="264.0" text="Tipo" />
+                        <Label layoutX="122.0" layoutY="391.0" text="Nível" />
+                        <TextField fx:id="tipoField" layoutX="215.0" layoutY="258.0" promptText="tipo" />
+                        <TextField fx:id="nivelField" layoutX="215.0" layoutY="385.0" promptText="nivel" />
+                        <ImageView fitHeight="206.0" fitWidth="394.0" layoutX="469.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../target/classes/ex1/pokemon_image.jpeg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Exibir">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView layoutX="-4.0" layoutY="40.0" prefHeight="598.0" prefWidth="503.0">
+                    <columns>
+                      <TableColumn fx:id="idNome" prefWidth="217.0" text="Nome" />
+                      <TableColumn fx:id="idTipo" prefWidth="157.0" text="Tipo" />
+                        <TableColumn fx:id="idNivel" prefWidth="128.0" text="Nível" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="499.0" layoutY="84.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+                  <Button layoutX="498.0" layoutY="152.0" mnemonicParsing="false" onAction="#update" text="Update" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
